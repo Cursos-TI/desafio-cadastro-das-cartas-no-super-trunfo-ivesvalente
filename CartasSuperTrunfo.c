@@ -1,17 +1,15 @@
 #include <stdio.h>
 
-//Etrutura para representar uma cidade
 int main() {
     printf("Desafio Super Trunfo\n");
 
-    int populaçao;
+    int populacao;
     float area;
     float PIB;
     int pontos_turisticos;
     char nome[50];
     char codigo[40];
 
-    //Função para cadastrar uma carta
     printf("Digite o código da cidade (ex: A01): ");
     scanf("%s", codigo);
 
@@ -19,7 +17,7 @@ int main() {
     scanf("%s", nome);
 
     printf("Digite a população: ");
-    scanf("%d", &populaçao);
+    scanf("%d", &populacao);
 
     printf("Digite a área (em km²): ");
     scanf("%f", &area);
@@ -30,14 +28,18 @@ int main() {
     printf("Digite o número de pontos turísticos: ");
     scanf("%d", &pontos_turisticos);
 
-    //Função para exibir os dados de uma carta
+    float densidade_populacional = populacao / area;
+    float PIB_per_capita = PIB / populacao;
+
     printf("\n--- Dados da Cidade ---\n");
     printf("Código: %s\n", codigo);
     printf("Nome: %s\n", nome);
-    printf("População: %d\n", populaçao);
+    printf("População: %d\n", populacao);
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2f bilhões\n", PIB);
     printf("Pontos Turísticos: %d\n", pontos_turisticos);
+    printf("Densidade populacional: %.2f hab/km²\n", densidade_populacional);
+    printf("PIB per capita: %.2f R$\n", PIB_per_capita);
 
     return 0;
 }
