@@ -75,6 +75,6 @@ int main() {
         printf("Carta 1 venceu (População).\n");
     } else {
         printf("Carta 2 venceu (População).\n");
-
+    }
     return 0;
 }
